@@ -34,15 +34,29 @@ describe Spiral do
     end
   end
 
+  describe "empty_array" do
+    it "should make a 2D array with 1 cell for n = 1" do
+      spiral.empty_array(1).should == [[nil]]
+    end
+    it "should make a 2D array with 4 cells for n = 4" do
+      spiral.empty_array(4).should == [[nil, nil], [nil, nil]]
+    end
+    it "should make a 2D array with 9 cells for n = 9" do
+      spiral.empty_array(9).should == [[nil, nil, nil], [nil, nil, nil], [nil,nil,nil]]
+    end
+  end
+
   describe "spiral_fill" do
 
     it "should fill a 2x2 array with the specified values in CC spiral order" do
+      pending
       spiral.stub!(:center_coords).and_return([0,1])
       spiral.spiral_fill(%w(a,b,c,d)).should ==
         [ %w( d, c ) ,
           %w( a, b )]
     end
     it "should fill a 3x3 array with the specified values in CC spiral order" do
+      pending
       spiral.stub!(:center_coords).and_return([1,1])
       spiral.spiral_fill(%w(a,b,c,d,e,f,g,h,i)).should ==
         [ %w( e, d, c) ,
