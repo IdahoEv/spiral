@@ -1,0 +1,8 @@
+Obviously there are cleverer solutions to this problem.  I  elected to treat it like a small application and opted for
+readability and TDD approach rather than cleverness.
+
+To use, run:
+$>  ruby spiral.rb <arg>
+
+Where arg is a valid square integer
+

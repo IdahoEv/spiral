@@ -29,8 +29,4 @@ describe "Spiral Integrations" do
 EOS
     end
   end
-
-
-
-
 end
