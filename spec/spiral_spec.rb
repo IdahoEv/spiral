@@ -53,14 +53,12 @@ describe Spiral do
   describe "spiral_fill" do
 
     it "should fill a 2x2 array with the specified values in CC spiral order" do
-      pending
       spiral.stub!(:center_coords).and_return([0,1])
       spiral.spiral_fill(%w(a b c d)).should ==
         [ %w( d c ) ,
           %w( a b )]
     end
     it "should fill a 3x3 array with the specified values in CC spiral order" do
-      pending
       spiral.stub!(:center_coords).and_return([1,1])
       spiral.spiral_fill(%w(a b c d e f g h i)).should ==
         [ %w( e d c ),

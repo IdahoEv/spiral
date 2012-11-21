@@ -34,21 +34,16 @@ class Spiral
 
     count = 1
     DIRECTIONS.cycle do |dir|
-      puts "List:#{list.inspect} "
-
       # grab items off the list
       # TODO:  Move this math to a method and spec it!
       values = list.shift( (count + 1) / 2)
-      puts "Shifting #{((count +1) /2)} values"
       break if values.empty?
-      puts "values: #{values.inspect}"
 
       values.each do |val|
-        # insert the val
-        array[cell[0]][cell[1]] = val
-        puts "inserting #{val} into #{cell}"
+        # insert the val.   Outer array is row, column i.e. y,x because that
+        # renders visually as x, y.  :-P
+        array[cell[1]][cell[0]] = val
 
-        puts "moving #{dir}"
         # move to the next cell
         cell[0] += dir[0]
         cell[1] += dir[1]
