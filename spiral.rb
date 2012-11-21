@@ -9,6 +9,8 @@ if ARGV.length != 1
 else
   arg = ARGV.first.to_i
   if arg > 0 and spiral.perfect_square?(arg.to_i)
+    print spiral.format_matrix(spiral.generate_spiral(arg))
+    exit(0)
   else
     puts "You must provide an integer that is a perfect square"
     exit(1)

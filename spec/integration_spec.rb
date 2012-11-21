@@ -19,7 +19,15 @@ describe "Spiral Integrations" do
     it "should complain that the argument is not valid" do
       `#{command} 122`.should =~ /You must provide an integer that is a perfect square/
     end
+  end
 
+  describe "with a square argument" do
+    it "should provide the matrix as output" do
+      `#{command} 4`.should == <<-EOS
+4 3
+1 2
+EOS
+    end
   end
 
 

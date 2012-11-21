@@ -52,7 +52,10 @@ class Spiral
       count += 1
     end
     array
+  end
 
+  def generate_spiral(num)
+    spiral_fill((1..num).to_a)
   end
 
   def format_matrix(array)
