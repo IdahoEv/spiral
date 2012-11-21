@@ -16,5 +16,7 @@ class Spiral
     ]
   end
 
+  def spiral_fill(list)
+  end
 
 end
