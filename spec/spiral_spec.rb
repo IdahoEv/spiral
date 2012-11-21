@@ -67,4 +67,18 @@ describe Spiral do
     end
   end
 
+  describe "format_matrix" do
+    it "should format the cells in equal columns" do
+      spiral.format_matrix([ [ 1, 2 ] ,
+                             [ 3, 4 ]]).should == "1 2\n3 4\n"
+    end
+
+    it "should format the cells in equal columns even with mixed-length values" do
+      spiral.format_matrix([[ 1234, 1 ],
+                            [ 2, 666]]
+        ).should == "1234 1   \n2    666 \n"
+    end
+
+  end
+
 end

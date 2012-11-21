@@ -55,4 +55,15 @@ class Spiral
 
   end
 
+  def format_matrix(array)
+    cellwidth = array.flatten.map{ |val| val.to_s.length }.max
+    format = "%-#{cellwidth}i"
+
+    array.map do |row|
+      row.map do |val|
+        sprintf(format,val)
+      end.join(' ')
+    end.join("\n") + "\n"
+  end
+
 end
